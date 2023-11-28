@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fade Effect</title>
+</head>
+<body>
+  <h3 style="text-align: center; margin-bottom: 100px;"> Create a web page such that it contains two boxes and a button. If the boxes are visible then on press of the button they should fade away whereas if the boxes are invisible then on press of the button they should become visible.</h3>
+  <div style="display: flex; justify-content: center;" class="outer-div">
+    <div style="height: 200px; width: 400px; background-color: aqua; margin-right: 100px;" id="inner-div1"></div>
+    <div style="height: 200px; width: 400px; background-color: chartreuse;" id="inner-div2"></div>
+  </div>
+  <div style="display: flex; justify-content: center; margin-top: 10vh;">
+    <button style="padding: 9px; background-color: aqua; border-radius: 10px; cursor: pointer;" id="btn" onclick="fun()">click me</button>
+  </div>
+  <script>
+    function fun(){
+      var div1 = document.getElementById("inner-div1")
+      var div2 = document.getElementById("inner-div2")
+      div1.style.transition="all 2s ease-in-out"
+      div2.style.transition="all 2s ease-in-out"
+      if(div1.style.opacity === '1'){
+        div1.style.opacity = '0'
+      } else{
+        div1.style.opacity = '1';
+      }
+      if(div2.style.opacity === '1'){
+        div2.style.opacity = '0'
+      } else{
+        div2.style.opacity = '1';
+      }
+
+    }
+  </script>
+</body>
+</html>
