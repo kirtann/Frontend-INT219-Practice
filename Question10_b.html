@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Javascript Events</title>
+</head>
+<body>
+  <h1 style="text-align: center;">Change the color of button on mouseover and mouseout events using Javascript.</h1>
+  <p style="text-align: center;">Hover the mouse on button</p>
+  <div style="position:relative; top: 20vh ;display: flex; justify-content: center; align-items: center;" class="main">
+    <button style="padding: 20px; background-color: blue; border-radius: 20px; cursor: pointer;" id="btn">Hover Me</button>
+  </div>
+  <script>
+    var btn = document.getElementById('btn');
+    btn.onmouseenter = (()=>{
+      btn.style.backgroundColor='yellow';
+    });
+    btn.onmouseout = (()=>{
+      btn.style.backgroundColor='blue';
+    });
+    btn.onclick = ()=>{
+      console.log("HI")
+    };
+  </script>
+</body>
+</html>
