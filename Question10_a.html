@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Submit Form</title>
+</head>
+<body>
+  <h1 style="text-align: center;">Enable the submit button only when the checkbox "I agree" is checked using jQuery</h1>
+  <p style="text-align: center;"> hi (click here to check if jQuery works)</p>
+  <form style="align-items: center; position: relative; display: flex; justify-content: center; flex-direction: column; top: 20vh;" action="">
+    <div><input type="checkbox" name="agree" id="ag"/>I agree</div><br>
+    <input type="submit" id="submitBtn" disabled="disabled"/><br>
+  </form>
+  <script src="jquery/jquery-3.7.1.min.js"></script>
+  <script>
+  $(document).ready(()=>{
+    var terms = $('#ag')
+    $('p').click(()=>{
+      $('p').html("hello (I am changed with help of jQuery)")
+    });
+    terms.click(()=>{
+      if($("#ag").is(":checked")){
+        $('#submitBtn').removeAttr("disabled");
+      }
+      else{
+        $('#submitBtn').attr("disabled", "disabled");
+      }
+    });
+  });
+  </script>
+</body>
+</html>
